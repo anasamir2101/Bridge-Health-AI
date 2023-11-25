@@ -97,14 +97,10 @@ input {
   font-weight: 700;
   line-height: normal;
 }
-.btn-div {
+/* .btn-div {
   text-align: center;
-}
+} */
 .forgot {
-  margin-left: 25rem;
-  width: 103px;
-  height: 15px;
-  flex-shrink: 0;
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -113,6 +109,14 @@ input {
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
+  align-self: flex-end;
+  margin-right: 15%;
+}
+.login-btn-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .remember {
   color: #000;
@@ -127,7 +131,7 @@ input {
   display: flex;
   justify-content: center;
   column-gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 75px;
 }
 .create-btn-div {
   display: flex;
@@ -140,6 +144,7 @@ input {
   width: 70%;
   border: 1px solid #b9b9b9;
   text-align: center;
+  margin-top: -75px;
 }
 .create-btn {
   background-color: transparent;
