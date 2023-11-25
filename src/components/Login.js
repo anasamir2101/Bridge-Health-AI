@@ -7,7 +7,7 @@ const Login = () => {
     <>
       <div className='main'>
         <div className='left-side'>
-          <div className=''>
+          <div className='logo-div'>
             <img src={logo} alt='logo' className='logo' />
             <p className='information'>
               <span>Bridge HealthAI</span>
@@ -15,6 +15,7 @@ const Login = () => {
               health-related needs
             </p>
           </div>
+
           <div className='input-fields'>
             <div className='first-field'>
               <h1 className='label'>Username</h1>
@@ -22,7 +23,7 @@ const Login = () => {
             </div>
             <div className='second-field'>
               <h1 className='label'>Password</h1>
-              <input type='text' />
+              <input type='password' />
             </div>
           </div>
           <div className='btn-div'>
@@ -45,13 +46,13 @@ const Login = () => {
               </svg>
               <h1 className='remember'>Remember me</h1>
             </div>
-            <div>
+            <div className='create-btn-div'>
               <p className='line'></p>
               <button className='create-btn'>Create Account</button>
             </div>
           </div>
         </div>
-        <div>
+        <div className='right-side'>
           <img className='main-img' src={mainimg} />
         </div>
       </div>
