@@ -97,9 +97,7 @@ input {
   font-weight: 700;
   line-height: normal;
 }
-/* .btn-div {
-  text-align: center;
-} */
+
 .forgot {
   color: #000;
   text-align: center;
@@ -158,4 +156,64 @@ input {
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #166154;
+  width: 30%;
+  height: 100vh;
+}
+.sidebar-logo {
+  text-align: center;
+  padding-top: 20px;
+}
+.sidebar-logo img {
+  width: 75%;
+}
+
+.sidebar-icon {
+  color: white;
+  width: 42px;
+  height: 37px;
+}
+.sidebar-links {
+  padding-top: 10%;
+}
+.sidebar-links ul {
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+.sidebar-links ul li {
+  display: flex;
+  padding-bottom: 20px;
+  column-gap: 16px;
+}
+
+.sidebar-links ul li a {
+  width: 55%;
+  text-align: left;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
+}
+ul li {
+  /* background-color: aqua; */
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+.links-main {
+  display: grid;
+  row-gap: 100px;
+}
+@media screen and (max-width: 1290px) {
+  .links-main {
+    display: grid;
+    row-gap: 30px;
+  }
 }
