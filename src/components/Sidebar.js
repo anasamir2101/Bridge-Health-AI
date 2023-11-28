@@ -19,11 +19,11 @@ const Sidebar = () => {
             <ul>
               <li>
                 <MdDashboard className='sidebar-icon' />
-                <a href=''>Patient Dashboard </a>
+                <a href='/full-dashboard'>Patient Dashboard </a>
               </li>
               <li>
                 <BsChatLeftDots className='sidebar-icon' />
-                <a href=''>Chat with Bridget </a>
+                <a href='/chat'>Chat with Bridget </a>
               </li>
               <li className='notification'>
                 <MdOutlineNotificationAdd className='sidebar-icon' />

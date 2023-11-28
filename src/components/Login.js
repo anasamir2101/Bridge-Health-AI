@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import mainimg from '../assets/attachment1.png';
 import logo from '../assets/titlepagelogo.png';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    console.log('Entered Username:', username);
+    console.log('Entered Password:', password);
+
+    const lowercasedUsername = username.toLowerCase();
+    const lowercasedPassword = password.toLowerCase();
+
+    console.log('Lowercased Username:', lowercasedUsername);
+    console.log('Lowercased Password:', lowercasedPassword);
+
+    if (lowercasedUsername === username && lowercasedPassword === password) {
+      navigate('/full-dashboard');
+    } else {
+      alert('Invalid username or password');
+    }
+  };
+
   return (
     <>
       <div className='main'>
@@ -19,33 +41,32 @@ const Login = () => {
           <div className='input-fields'>
             <div className='first-field'>
               <h1 className='label'>Username</h1>
-              <input type='text' />
+              <input
+                type='text'
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </div>
             <div className='second-field'>
               <h1 className='label'>Password</h1>
-              <input type='password' />
+              <input
+                type='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
           </div>
           <div className='login-btn-div'>
-            <button className='login-btn'>Login</button>
+            <button className='login-btn' onClick={handleLogin}>
+              Login
+            </button>
             <a href='' className='forgot'>
               Forgot Password
             </a>
           </div>
 
           <div className='remember-div'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='33'
-              height='30'
-              viewBox='0 0 33 30'
-              fill='none'
-            >
-              <path
-                d='M2.96934 29.0471C2.17773 29.0471 1.52748 28.8233 1.01859 28.3757C0.509695 27.9281 0.255249 27.3562 0.255249 26.66V2.78901C0.255249 2.09278 0.509695 1.52087 1.01859 1.07329C1.52748 0.625707 2.17773 0.401917 2.96934 0.401917H30.1102C30.9018 0.401917 31.5521 0.625707 32.061 1.07329C32.5698 1.52087 32.8243 2.09278 32.8243 2.78901V26.66C32.8243 27.3562 32.5698 27.9281 32.061 28.3757C31.5521 28.8233 30.9018 29.0471 30.1102 29.0471H2.96934ZM25.9543 9.9503L22.9009 7.56321L14.3346 16.664L9.83937 12.7104L7.12528 15.0975L14.6738 21.7366L25.9543 9.9503Z'
-                fill='#166154'
-              />
-            </svg>
+            <input type='checkbox' id='rememberCheckbox' className='checkbox' />
             <h1 className='remember'>Remember me</h1>
           </div>
           <div className='create-btn-div'>
